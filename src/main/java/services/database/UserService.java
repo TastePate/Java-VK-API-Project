@@ -39,4 +39,14 @@ public class UserService {
     public void clearTable() {
         usersDao.clearTable();
     }
+
+    public String[] getDataForCSV(User user) {
+        return new String[] {String.valueOf(user.getVkid()),
+                user.getFirstName(),
+                user.getLastName(),
+                user.getCountry(),
+                user.getCity(),
+                user.getSex().name(),
+        };
+    }
 }
