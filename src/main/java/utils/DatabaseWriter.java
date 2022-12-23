@@ -49,7 +49,8 @@ public class DatabaseWriter {
     }
 
     private void clearTables() {
-        this.groupService.clearTable();
         this.userService.clearTable();
+        this.groupService.clearTable();
+        System.out.println("Старые данные успешно удалены!");
     }
 }
