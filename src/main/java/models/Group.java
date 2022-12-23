@@ -1,5 +1,6 @@
 package models;
 import jakarta.persistence.*;
+import org.hibernate.collection.spi.PersistentSet;
 
 import java.util.*;
 
@@ -21,7 +22,7 @@ public class Group {
     private Integer membersCount;
 
     @OneToMany(mappedBy = "group")
-    private HashSet<User> usersFromGroup;
+    private PersistentSet<User> usersFromGroup;
 
     public Group(String screenName, String name, Integer membersCount) {
         this.screenName = screenName;
@@ -64,11 +65,11 @@ public class Group {
         this.membersCount = membersCount;
     }
 
-    public HashSet<User> getUsersFromGroup() {
+    public PersistentSet<User> getUsersFromGroup() {
         return usersFromGroup;
     }
 
-    public void setUsersFromGroup(HashSet<User> usersFromGroup) {
+    public void setUsersFromGroup(PersistentSet<User> usersFromGroup) {
         this.usersFromGroup = usersFromGroup;
     }
 

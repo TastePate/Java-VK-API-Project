@@ -101,5 +101,18 @@
       <artifactId>hibernate-core</artifactId>
       <version>6.1.6.Final</version>
     </dependency>
+
+    <dependency>
+      <groupId>com.opencsv</groupId>
+      <artifactId>opencsv</artifactId>
+      <version>5.7.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>jfree</groupId>
+      <artifactId>jfreechart</artifactId>
+      <version>1.0.13</version>
+    </dependency>
+
   </dependencies>
 </project>

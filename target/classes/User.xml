@@ -26,10 +26,7 @@
             <basic name="sex">
                 <column name="sex" nullable="false" precision="-1"/>
             </basic>
-            <basic name="groupId">
-                <column name="group_id" nullable="false" precision="-1"/>
-            </basic>
-            <many-to-one name="usersGroupsByGroupId" optional="true" target-entity="models.Group">
+            <many-to-one name="id" optional="true" target-entity="models.Group">
                 <join-column name="group_id" nullable="false" referenced-column-name="id"/>
             </many-to-one>
         </attributes>

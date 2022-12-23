@@ -14,73 +14,11 @@
             <basic name="name">
                 <column name="name" nullable="false"/>
             </basic>
-            <basic name="isClosed">
-                <column name="is_closed" nullable="false" precision="-1"/>
-            </basic>
             <basic name="membersCount">
                 <column name="members_count" nullable="false" precision="-1"/>
             </basic>
-            <one-to-many name="usersFromGroupsById" mapped-by="usersGroupsByGroupId"
+            <one-to-many name="usersFromGroup" mapped-by="group_id"
                          target-entity="models.User"/>
         </attributes>
     </entity>
-    <entity class="asd.UsersFromGroups">
-        <table name="users_from_groups" schema="public" catalog="postgres"/>
-        <attributes>
-            <id name="id">
-                <column name="id" precision="-1"/>
-            </id>
-            <basic name="vkid">
-                <column name="vkid" precision="-1"/>
-            </basic>
-            <basic name="firstName">
-                <column name="first_name"/>
-            </basic>
-            <basic name="lastName">
-                <column name="last_name"/>
-            </basic>
-            <basic name="country">
-                <column name="country" nullable="false"/>
-            </basic>
-            <basic name="city">
-                <column name="city" nullable="false" precision="-1"/>
-            </basic>
-            <basic name="sex">
-                <column name="sex" nullable="false" precision="-1"/>
-            </basic>
-            <basic name="groupId">
-                <column name="group_id" nullable="false" precision="-1"/>
-            </basic>
-            <many-to-one name="usersGroupsByGroupId" optional="true" target-entity="asd.UsersGroups">
-                <join-column name="group_id" nullable="false" referenced-column-name="id"/>
-            </many-to-one>
-        </attributes>
-    </entity>
-    <entity class="asd.UsersGroups">
-        <table name="users_groups" schema="public" catalog="postgres"/>
-        <attributes>
-            <id name="id">
-                <column name="id" precision="-1"/>
-            </id>
-            <basic name="screenName">
-                <column name="screen_name" nullable="false"/>
-            </basic>
-            <basic name="name">
-                <column name="name" nullable="false"/>
-            </basic>
-            <basic name="isClosed">
-                <column name="is_closed" nullable="false" precision="-1"/>
-            </basic>
-            <basic name="membersCount">
-                <column name="members_count" nullable="false" precision="-1"/>
-            </basic>
-            <one-to-many name="usersFromGroupsById" mapped-by="usersGroupsByGroupId"
-                         target-entity="asd.UsersFromGroups"/>
-        </attributes>
-    </entity>
-    <entity class="asd.UsersFromGroups"/>
-    <entity class="asd.UsersFromGroups"/>
-    <entity class="asd.UsersFromGroups"/>
-    <entity class="asd.UsersFromGroups"/>
-    <entity class="asda.UsersFromGroups"/>
 </entity-mappings>

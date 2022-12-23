@@ -24,6 +24,7 @@ public class CSVWriterService {
                 .collect(Collectors.toSet());
         try (CSVWriter writer = new CSVWriter(new FileWriter(FILE_NAME))){
             writer.writeAll(users);
+            System.out.println("Выгрузка прошла успешно");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

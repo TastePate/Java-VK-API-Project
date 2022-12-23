@@ -24,10 +24,9 @@ public class GroupService {
     public void updateGroup(Group group) {
         groupDao.update(group);
     }
-
-//    public List<Group> findAllUsers() {
-//        return groupDao.findAll();
-//    }
+    public List<Group> findAll() {
+        return groupDao.findAll();
+    }
 
     public Group findGroupById(int id) {
         return groupDao.findGroupById(id);

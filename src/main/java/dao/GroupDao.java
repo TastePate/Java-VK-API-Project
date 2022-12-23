@@ -41,11 +41,11 @@ public class GroupDao {
                 .get(Group.class, id);
     }
 
-    public List<User> findAll() {
-        return (List<User>)  HibernateSessionFactoryUtil
+    public List<Group> findAll() {
+        return HibernateSessionFactoryUtil
                 .getSession()
                 .createQuery("From Group")
-                .list();
+                .stream().toList();
     }
 
     public void clearTable() {
