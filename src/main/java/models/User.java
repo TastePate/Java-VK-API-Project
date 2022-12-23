@@ -105,6 +105,10 @@ public class User {
         this.sex = sex;
     }
 
+    public Group getGroup() {
+        return group;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -133,5 +137,19 @@ public class User {
         result = 31 * result + (city != null ? city.hashCode() : 0);
         result = 31 * result + (sex != null ? sex.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", vkid=" + vkid +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", country='" + country + '\'' +
+                ", city='" + city + '\'' +
+                ", sex=" + sex +
+                ", group=" + group +
+                '}';
     }
 }
