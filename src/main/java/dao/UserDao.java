@@ -40,7 +40,7 @@ public class UserDao {
         session.close();
     }
 
-    public Group findGroupById(int id) {
+    public Group findUserById(int id) {
         return HibernateSessionFactoryUtil
                 .getSession()
                 .get(Group.class, id);

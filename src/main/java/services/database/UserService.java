@@ -33,8 +33,8 @@ public class UserService {
         return usersDao.findAll();
     }
 
-    public Group findAutoById(int id) {
-        return usersDao.findGroupById(id);
+    public Group findGroupById(int id) {
+        return usersDao.findUserById(id);
     }
     public void clearTable() {
         usersDao.clearTable();
